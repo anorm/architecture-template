@@ -14,7 +14,7 @@ flowchart TD
 
     datamodel[<b>src/datamodel.yaml</b>\n<i>Contains the conceptual data model</i>]
     dm2md(dm2md)
-    generated_markdown[<b>Generated markdown</b>\n<i>Temporary intermediate files</i>]
+    generated_markdown[<b>src/docs/landscape/02-concepts.md</b>\n<i>Generated markdown</i>]
     workspace[<b>src/workspace.dsl</b>\n<i>Structurizr architecture description</i>]
     markdown[<b>src/docs/*.md</b>\n<i>Markdown files containing\ngeneral documentation</i>]
     structurizr(structurizr)
