@@ -12,13 +12,13 @@ flowchart TD
     style structurizr fill:#aea,stroke:#000
     style architecture fill:#ddd,stroke:#000
 
-    datamodel[src/datamodel.yaml]
+    datamodel[<b>src/datamodel.yaml</b>\n<i>Contains the conceptual data model</i>]
     dm2md(dm2md)
-    generated_markdown[Generated markdown]
-    workspace[src/workspace.dsl]
-    markdown[src/docs/*.md]
+    generated_markdown[<b>Generated markdown</b>\n<i>Temporary intermediate files</i>]
+    workspace[<b>src/workspace.dsl</b>\n<i>Structurizr architecture description</i>]
+    markdown[<b>src/docs/*.md</b>\n<i>Markdown files containing\ngeneral documentation</i>]
     structurizr(structurizr)
-    architecture[Architecture documentation]
+    architecture[<b>Architecture documentation</b>\n<i>A complete documentation site containing\ndocumentation, diagrams and the conceptual\ndata model</i>]
 
     datamodel --> dm2md
     dm2md --> generated_markdown
