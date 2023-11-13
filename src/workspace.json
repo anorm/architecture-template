@@ -1,0 +1,82 @@
+{
+  "id" : 1,
+  "name" : "The system landscape",
+  "description" : "The description of the system landscape",
+  "lastModifiedDate" : "2023-11-13T12:57:52Z",
+  "properties" : {
+    "structurizr.dsl" : "d29ya3NwYWNlIHsKICAgICFpZGVudGlmaWVycyBoaWVyYXJjaGljYWwKICAgICFpbXBsaWVkUmVsYXRpb25zaGlwcyB0cnVlCgogICAgbmFtZSAiVGhlIHN5c3RlbSBsYW5kc2NhcGUiCiAgICBkZXNjcmlwdGlvbiAiVGhlIGRlc2NyaXB0aW9uIG9mIHRoZSBzeXN0ZW0gbGFuZHNjYXBlIgoKICAgICFkb2NzIGRvY3MvbGFuZHNjYXBlLwoKICAgIG1vZGVsIHsKICAgICAgICB1c2VyID0gcGVyc29uICJVc2VyIgogICAgICAgIHNvZnR3YXJlU3lzdGVtID0gc29mdHdhcmVTeXN0ZW0gIlNvZnR3YXJlIFN5c3RlbSIKCiAgICAgICAgdXNlciAtPiBzb2Z0d2FyZVN5c3RlbSAiVXNlcyIKICAgIH0KCiAgICB2aWV3cyB7CiAgICAgICAgc3lzdGVtTGFuZHNjYXBlICJsYW5kc2NhcGUiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICB9CiAgICB9Cgp9Cg=="
+  },
+  "configuration" : { },
+  "model" : {
+    "people" : [ {
+      "id" : "1",
+      "tags" : "Element,Person",
+      "properties" : {
+        "structurizr.dsl.identifier" : "user"
+      },
+      "name" : "User",
+      "relationships" : [ {
+        "id" : "3",
+        "tags" : "Relationship",
+        "properties" : {
+          "structurizr.dsl.identifier" : "d90c9eb5-b7d4-4b71-9dc5-7c2b3b3dc8ff"
+        },
+        "sourceId" : "1",
+        "destinationId" : "2",
+        "description" : "Uses"
+      } ],
+      "location" : "Unspecified"
+    } ],
+    "softwareSystems" : [ {
+      "id" : "2",
+      "tags" : "Element,Software System",
+      "properties" : {
+        "structurizr.dsl.identifier" : "softwaresystem"
+      },
+      "name" : "Software System",
+      "location" : "Unspecified",
+      "documentation" : { }
+    } ]
+  },
+  "documentation" : {
+    "sections" : [ {
+      "content" : "## Overview\n\nThis is the landscape documentation\n\n![](embed:landscape)\n",
+      "format" : "Markdown",
+      "filename" : "01-overview.md",
+      "order" : 1,
+      "title" : ""
+    } ]
+  },
+  "views" : {
+    "systemLandscapeViews" : [ {
+      "key" : "landscape",
+      "order" : 1,
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "enterpriseBoundaryVisible" : true,
+      "relationships" : [ {
+        "id" : "3"
+      } ],
+      "elements" : [ {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      } ]
+    } ],
+    "configuration" : {
+      "branding" : { },
+      "styles" : { },
+      "terminology" : { }
+    }
+  }
+}
