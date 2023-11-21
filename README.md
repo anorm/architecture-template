@@ -33,15 +33,19 @@ flowchart TD
 * Docker
 * Visual Studio Code
 * Visual Studio Code plugins:
-    * ciarant.vscode-structurizr
-    * yzhang.markdown-all-in-one
-    * jebbs.plantuml
+    * `ciarant.vscode-structurizr`
+    * `yzhang.markdown-all-in-one`
+    * `jebbs.plantuml`
+    * (optional) `bierner.markdown-mermaid`
 
 ## Getting started
 
 * Fork this repository
 * Start docker containers (`docker compose up`)
-* Edit `src/workspace.dsl` and markdown files in `src/docs/`
+
+* Edit the software model in `src/workspace.dsl`
+* Edit the markdown documentation files in `src/docs/`
+* Edit the conceptual data model in `src/datamodel.yaml`
 * Preview markdown in Visual Studio Code
 * Preview Structurizr output in browser http://127.0.0.1:8081/
 * Stop docker containers (`docker compose down`)
