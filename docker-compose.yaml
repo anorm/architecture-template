@@ -5,8 +5,20 @@ services:
       - 8081:8080
     volumes:
       - ./src:/usr/local/structurizr
+      - ./plugins:/usr/local/structurizr/plugins
 
   plantuml:
     image: plantuml/plantuml-server
     ports:
       - 8080:8080
+
+  dm2md:
+    build: ./docker/dm2md
+    volumes:
+      - ./src:/src
+    command:
+      - monitor
+      - /src/datamodel.yaml
+      - sh
+      - -c
+      - "python /dm2md/dm2md /src/datamodel.yaml > /src/docs/landscape/02-concepts.md"
