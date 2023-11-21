@@ -1,13 +1,11 @@
 #!/bin/sh
 FILE_TO_MONITOR="$1"
 shift
-#COMMAND_TO_EXECUTE="$@"
 
-#$COMMAND_TO_EXECUTE
 "$@"
 SHA=$(sha256sum "$FILE_TO_MONITOR")
 DIR_TO_MONITOR=$(dirname "$FILE_TO_MONITOR")
-inotifywait -e close_write,moved_to,create -m $DIR_TO_MONITOR |
+inotifywait -m $DIR_TO_MONITOR |
 while read -r directory events filename; do
     if [ "$directory$filename" != "$FILE_TO_MONITOR" ]; then
         continue
@@ -17,7 +15,6 @@ while read -r directory events filename; do
         continue
     fi
     echo $(date "+%Y-%m-%d %H:%M:%S") - "$@"
-    #$COMMAND_TO_EXECUTE
     "$@"
     SHA=$NEW_SHA
 done
